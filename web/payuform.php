@@ -1,9 +1,9 @@
 <?php
 // Merchant key here as provided by Payu
-$MERCHANT_KEY = "{{=it.merchant_key}}"; //Please change this value with live key for production
+$MERCHANT_KEY = "gtKFFx"; //Please change this value with live key for production
    $hash_string = '';
 // Merchant Salt as provided by Payu
-$SALT = "{{=it.salt}}";    //Please change this value with live salt for production
+$SALT = "eCwWELxi"; //Please change this value with live salt for production
 
 // End point - change to https://secure.payu.in for LIVE mode
 $PAYU_BASE_URL = "https://test.payu.in";
@@ -88,9 +88,13 @@ if(empty($posted['hash']) && sizeof($posted) > 0) {
       <input type="hidden" name="hash" value="<?php echo $hash ?>"/>
       <input type="hidden" name="txnid" value="<?php echo $txnid ?>" />
 	 
-	    <input type="hidden" name="surl" value="{{=it.response_url}}" />   <!--Please change this parameter value with your success page absolute url like http://mywebsite.com/response.php. -->
-		  <input type="hidden" name="furl" value="{{=it.response_url}}" /><!--Please change this parameter value with your failure page absolute url like http://mywebsite.com/response.php. -->
+	    <input type="hidden" name="surl" value="http://localhost/response.php" />   <!--Please change this parameter value with your success page absolute url like http://mywebsite.com/response.php. -->
+		 <input type="hidden" name="furl" value="http://localhost/response.php" /><!--Please change this parameter value with your failure page absolute url like http://mywebsite.com/response.php. -->
 	  
+	
+	  
+	   
+	   
       <table>
         <tr>
           <td><b>Mandatory Parameters</b></td>
